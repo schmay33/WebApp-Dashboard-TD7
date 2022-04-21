@@ -75,7 +75,7 @@ user.addEventListener("input", function (e) {
 			}
 		});
 	}
-
+    //show the results
 	function showResults(val) {
 		res.style.display = "inherit";
 		res.innerHTML = "";
