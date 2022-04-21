@@ -326,7 +326,6 @@ button[type="submit"],
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	max-width: 99vw;
 }
 
 .social-stats-item {
@@ -341,11 +340,19 @@ button[type="submit"],
 	min-width: 90vw;
 }
 .social-image {
-	display: inline;
+	display: flex;
+	border-radius: 50%;
+	background: var(--color-primary);
+	justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
 }
 .social-icon {
-	width: 20vw;
-	fill: var(--color-primary);
+	fill: var(--color-text-primary);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%; 
 }
 .social-text {
 	display: flex;
@@ -522,10 +529,12 @@ button[type="submit"],
 	}
 
 	.social-stats-item {
+		min-width: inherit;
+		max-width: inherit;
+		justify-content: left;
+		padding: 10px 10px;
 		width: 100%;
-		justify-content: center;
-		max-width: 28vw !important;
-		min-width: 5vw !important;
+		margin: 0px 5px;
 	}
 
 	.social-icon {
@@ -545,9 +554,8 @@ button[type="submit"],
 	}
 
 	#social-stats-group {
-		display: grid !important;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr;
+		flex-direction: row;
+		justify-content: space-around;
 	}
 
 	.activity-container p:last-child {
@@ -601,7 +609,7 @@ button[type="submit"],
 
 @media screen and (min-width: 1024px) {
 	.widget-container-full {
-		width: 94vw;
+		width: 93vw;
 	}
 	.widget-container-half {
 		width: 46vw;
