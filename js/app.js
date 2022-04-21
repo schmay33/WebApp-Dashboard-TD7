@@ -107,7 +107,7 @@ document.addEventListener("click", function (e) {
 
 // Add Alert Banner
 alertBanner.innerHTML = `
-    <div class="alert-banner widget-container-full">
+    <div class="alert-banner">
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
         <p class="alert-banner-close">x</p>
     </div>
@@ -228,14 +228,21 @@ const monthlyData = {
 const trafficOptions = {
 	backgroundColor: "rgba(117, 119, 186, 0.5)",
 	fill: true,
-	aspectRatio: 5,
+	aspectRatio: 2.5,
 	animation: {
 		duration: 0,
 	},
 	scales: {
 		y: {
 			beginAtZero: true,
-		},
+        },
+        x: {
+            ticks: {
+                autoSkip: false,
+                maxRotation: 45,
+                minRotation: 45
+            }
+        },
 	},
 	plugins: {
 		legend: {

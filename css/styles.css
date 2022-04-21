@@ -75,6 +75,8 @@ select::-ms-expand {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 10px;
+	font-size: 14px;
+	width: 90%;
 }
 
 .alert-banner {
@@ -86,12 +88,13 @@ select::-ms-expand {
 }
 
 .alert-banner p {
-	display: inline;
+	display: inline-block;
 }
 
 .alert-banner-close {
 	float: right;
 	cursor: pointer;
+	display: inline !important;
 }
 
 .form-field,
