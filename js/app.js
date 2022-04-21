@@ -7,6 +7,7 @@ const email = document.getElementById("email");
 const public = document.getElementById("public");
 const timezone = document.getElementById("timezone");
 const save = document.getElementById("save");
+const cancel = document.getElementById("cancel");
 const alertMenu = document.getElementById("alert-menu");
 const trafficNav = document.getElementById("traffic-nav");
 let storage = window.localStorage;
@@ -35,6 +36,13 @@ save.addEventListener("click", function (e) {
 	storage.setItem("public", public.checked);
 	storage.setItem("timezone", timezone.value);
 	alert("Settings saved!");
+});
+
+cancel.addEventListener("click", function (e) {
+    e.preventDefault();
+    // storage clear item
+    storage.clear();
+    alert("Settings cleared!");
 });
 
 // On the user input, create an autocomplete for the list of users
